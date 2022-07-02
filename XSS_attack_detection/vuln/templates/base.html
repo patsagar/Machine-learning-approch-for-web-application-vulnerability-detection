@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
+        <script src="{{ url_for('static', filename='cat.js') }}" type="text/javascript"></script>
+    </head>
+
+    <body>
+        <div id="main">
+        <div id="navbar">
+            <ul>
+                <li><a id="home" href="/">Search</a></li>
+                <li><a id="login" href="/login">Login</a></li>
+                <li><a id="add" href="/restock">Add Item</a></li>
+            </ul>
+        </div>
+
+        <br><br><br><br>
+
+        {% block content %}
+        {% endblock %}
+        </div>
+
+    </body>
+</html>
